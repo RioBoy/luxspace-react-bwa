@@ -29,7 +29,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Cangkir Mauttie</h5>
             <span className="">IDR 89.300</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>
@@ -49,7 +49,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Bankyu Minimax</h5>
             <span className="">IDR 67.999</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>
@@ -69,7 +69,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Buku Sidu Edition</h5>
             <span className="">IDR 12.000.000</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>
@@ -89,7 +89,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Watch Note X</h5>
             <span className="">IDR 7.600.999</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>
@@ -109,7 +109,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Racking Plants</h5>
             <span className="">IDR 159.300</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>
@@ -129,7 +129,7 @@ export default function JustArrived() {
             </div>
             <h5 className="text-lg font-semibold mt-4">Buku Sidu Edition</h5>
             <span className="">IDR 12.000.000</span>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* fake children */}
             </a>
           </div>

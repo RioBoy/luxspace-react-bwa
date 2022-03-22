@@ -27,7 +27,7 @@ export default function BrowseRoom() {
               <h5 className="text-lg font-semibold">Living Room</h5>
               <span className="">18.309 items</span>
             </div>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* <!-- fake children --> */}
             </a>
           </div>
@@ -46,7 +46,7 @@ export default function BrowseRoom() {
               <h5 className="text-lg font-semibold">Decoration</h5>
               <span className="">77.392 items</span>
             </div>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* <!-- fake children --> */}
             </a>
           </div>
@@ -65,7 +65,7 @@ export default function BrowseRoom() {
               <h5 className="text-lg font-semibold">Bed Room</h5>
               <span className="">22.094 items</span>
             </div>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* <!-- fake children --> */}
             </a>
           </div>
@@ -84,7 +84,7 @@ export default function BrowseRoom() {
               <h5 className="text-lg font-semibold">Children Room</h5>
               <span className="">807 items</span>
             </div>
-            <a href="details.html" className="stretched-link">
+            <a href="/categories/123" className="stretched-link">
               {/* <!-- fake children --> */}
             </a>
           </div>
