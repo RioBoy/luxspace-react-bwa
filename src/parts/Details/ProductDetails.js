@@ -2,110 +2,113 @@ import React from 'react';
 
 export default function ProductDetails() {
   return (
-    <section class="container mx-auto md:px-4 xl:px-0">
-      <div class="flex flex-wrap my-4 md:my-12">
-        <div class="w-full md:hidden px-4">
-          <h2 class="text-5xl font-semibold mb-2">Chair Thatty</h2>
-          <span class="text-xl">IDR 12.000.000</span>
+    <section className="container mx-auto md:px-4 xl:px-0">
+      <div className="flex flex-wrap my-4 md:my-12">
+        <div className="w-full md:hidden px-4">
+          <h2 className="text-5xl font-semibold mb-2">Chair Thatty</h2>
+          <span className="text-xl">IDR 12.000.000</span>
         </div>
-        <div class="flex-1">
-          <div class="slider md:justify-between">
-            <div class="thumbnail">
+        <div className="flex-1">
+          <div className="slider md:justify-between">
+            <div className="thumbnail">
               {/* <!-- Slidesshow thumbnail item 1 Start --> */}
-              <div class="px-2">
+              <div className="px-2">
                 <div
-                  class="item selected"
+                  className="item selected"
                   data-img="/images/content/showcase-1.front.jpg"
                 >
                   <img
                     src="/images/content/showcase-1.front.jpg"
                     alt="chair side"
-                    class="object-cover w-full h-full rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
               {/* <!-- End Slidesshow thumbnail item 1 --> */}
 
               {/* <!-- Slidesshow thumbnail item 2 Start --> */}
-              <div class="px-2">
+              <div className="px-2">
                 <div
-                  class="item"
+                  className="item"
                   data-img="/images/content/showcase-1.back.jpg"
                 >
                   <img
                     src="/images/content/showcase-1.back.jpg"
                     alt="chair side"
-                    class="object-cover w-full h-full rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
               {/* <!-- End Slidesshow thumbnail item 2 --> */}
 
               {/* <!-- Slidesshow thumbnail item 3 Start --> */}
-              <div class="px-2">
+              <div className="px-2">
                 <div
-                  class="item"
+                  className="item"
                   data-img="/images/content/showcase-1.rear.jpg"
                 >
                   <img
                     src="/images/content/showcase-1.rear.jpg"
                     alt="chair side"
-                    class="object-cover w-full h-full rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
               {/* <!-- End Slidesshow thumbnail item 3 --> */}
 
               {/* <!-- Slidesshow thumbnail item 4 Start --> */}
-              <div class="px-2">
+              <div className="px-2">
                 <div
-                  class="item"
+                  className="item"
                   data-img="/images/content/showcase-1.side.jpg"
                 >
                   <img
                     src="/images/content/showcase-1.side.jpg"
                     alt="chair side"
-                    class="object-cover w-full h-full rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
               {/* <!-- End Slidesshow thumbnail item 4 --> */}
 
               {/* <!-- Slidesshow thumbnail item 5 Start --> */}
-              <div class="px-2">
-                <div class="item" data-img="/images/content/showcase-1.top.jpg">
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="/images/content/showcase-1.top.jpg"
+                >
                   <img
                     src="/images/content/showcase-1.top.jpg"
                     alt="chair side"
-                    class="object-cover w-full h-full rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
               {/* <!-- End Slidesshow thumbnail item 5 --> */}
             </div>
-            <div class="preview">
-              <div class="item rounded-lg h-full overflow-hidden">
+            <div className="preview">
+              <div className="item rounded-lg h-full overflow-hidden">
                 <img
                   src="/images/content/showcase-1.front.jpg"
                   alt="chair"
-                  class="object-cover w-full h-full rounded-lg"
+                  className="object-cover w-full h-full rounded-lg"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div class="flex-1 px-4 md:p-6">
-          <div class="hidden md:block">
-            <h2 class="text-5xl font-semibold mb-2">Chair Thatty</h2>
-            <p class="text-xl">IDR 12.000.000</p>
+        <div className="flex-1 px-4 md:p-6">
+          <div className="hidden md:block">
+            <h2 className="text-5xl font-semibold mb-2">Chair Thatty</h2>
+            <p className="text-xl">IDR 12.000.000</p>
           </div>
 
           <a
             href="/cart"
-            class="transition-all duration-200 bg-pink-400 text-black focus:bg-black focus:text-pink-400 rounded-full px-8 py-3 mt-4 inline-flex w-full md:w-auto justify-center"
+            className="transition-all duration-200 bg-pink-400 text-black focus:bg-black focus:text-pink-400 rounded-full px-8 py-3 mt-4 inline-flex w-full md:w-auto justify-center"
           >
             <svg
-              class="fill-current mr-3"
+              className="fill-current mr-3"
               width="26"
               height="25"
               viewBox="0 0 26 25"
@@ -121,15 +124,15 @@ export default function ProductDetails() {
             Add to Cart
           </a>
 
-          <hr class="my-8" />
+          <hr className="my-8" />
 
-          <h6 class="text-xl font-semibold mb-4">About the product:</h6>
-          <p class="text-xl leading-7 mb-6">
+          <h6 className="text-xl font-semibold mb-4">About the product:</h6>
+          <p className="text-xl leading-7 mb-6">
             Tailored to a level of perfection synonymous with that of a Savile
             Row suit and with understated quality in the detail, Jetty has been
             influenced by timeless 1950s style.
           </p>
-          <p class="text-xl leading-7 mb-6">
+          <p className="text-xl leading-7 mb-6">
             Providing a subtle nod to the past, Jetty also provides a perfect
             solution for the way we work today. A comprehensive product family,
             Jetty features a variety of elegant chairs and sofas.

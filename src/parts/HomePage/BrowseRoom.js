@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import useAsync from 'helpers/hooks/useAsync';
 
 export default function BrowseRoom() {
+  const { data, status, error, run, isLoading } = useAsync({
+    data: { username: '' },
+  });
+
+  useEffect(() => {
+    run(
+      fetch(
+        'https://7d9d9590-4108-447c-981e-ee4681d291b0.mock.pstmn.io/api/categories/?page=1&limit=4',
+      ).then(async (response) => {
+        const jsonResponse = await response.json();
+        if (response.ok) return jsonResponse;
+
+        throw new Error(JSON.stringify(jsonResponse));
+      }),
+    );
+  }, [run]);
+
+  console.log(data, status, error);
+  if (isLoading) return 'Loading';
   return (
     <section className="flex bg-gray-100 py-16 px-4" id="browse-the-room">
       <div className="container mx-auto">

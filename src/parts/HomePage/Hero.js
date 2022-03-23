@@ -31,8 +31,8 @@ export default function Hero() {
           <div className="overlay right-0 bottom-0 md:inset-0">
             <button
               className="video hero-cta focus:outline-none z-30 modal-trigger"
-              data-content='<div className="w-screen pb-56 md:w-88 relative z-50">
-            <div className="absolute w-full h-full">
+              data-content='<div class="w-screen pb-56 md:w-88 relative z-50">
+            <div class="absolute w-full h-full">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UYzBMGbdLj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>'
