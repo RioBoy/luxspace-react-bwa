@@ -45,8 +45,8 @@ function Loading({ ratio = {} }) {
       >
         <div className="bg-gray-300 rounded-lg w-full h-full">
           <div className={`overlay ${ratio?.meta?.[item.ratio.md]}`}>
+            <div className="w-28 h-3 bg-gray-400 mt-2 rounded-full"></div>
             <div className="w-24 h-3 bg-gray-400 mt-3 rounded-full"></div>
-            <div className="w-36 h-3 bg-gray-400 mt-2 rounded-full"></div>
           </div>
         </div>
       </div>
@@ -55,9 +55,7 @@ function Loading({ ratio = {} }) {
 }
 
 export default function BrowseRoom() {
-  const { data, status, error, run, isLoading } = useAsync({
-    data: { username: '' },
-  });
+  const { data, run, isLoading } = useAsync();
 
   useEffect(() => {
     run(
@@ -66,8 +64,6 @@ export default function BrowseRoom() {
       }),
     );
   }, [run]);
-
-  console.log(data, status, error);
 
   const ratioClassNames = {
     wrapper: {
@@ -82,13 +78,13 @@ export default function BrowseRoom() {
     },
     meta: {
       '1/9':
-        'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-70 lg:pl-72',
+        'left-0 top-0 bottom-0 flex justify-center flex-col xsm:pl-40 pl-48 md:pl-70 lg:pl-72',
       '1/4':
-        'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-70 lg:pl-72',
+        'left-0 top-0 bottom-0 flex justify-center flex-col xsm:pl-40 pl-48 md:pl-70 lg:pl-72',
       '2/2':
-        'inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12',
+        'inset-0 md:bottom-auto flex justify-center md:items-center flex-col xsm:pl-40 pl-48 md:pl-0 pt-0 md:pt-12',
       '2/3':
-        'inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12',
+        'inset-0 md:bottom-auto flex justify-center md:items-center flex-col xsm:pl-40 pl-48 md:pl-0 pt-0 md:pt-12',
     },
   };
 
@@ -132,7 +128,7 @@ export default function BrowseRoom() {
                       {item.products} item{item.products > 1 ? 's' : ''}
                     </span>
                   </div>
-                  <a href="/categories/123" className="stretched-link">
+                  <a href="/categories/3/products/1" className="stretched-link">
                     {/* <!-- fake children --> */}
                   </a>
                 </div>
