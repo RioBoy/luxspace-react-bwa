@@ -24,9 +24,9 @@ function SitemapLinks({ isActive, setActive, children, title }) {
             <path
               d="M1 1L9.75 7.5L18.5 1"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>

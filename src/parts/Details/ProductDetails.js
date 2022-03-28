@@ -1,96 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function ProductDetails() {
+import ReactHtmlParser from 'react-html-parser';
+
+export default function ProductDetails({ data }) {
+  const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || '');
+
   return (
     <section className="container mx-auto md:px-4 xl:px-0">
       <div className="flex flex-wrap my-4 md:my-12">
         <div className="w-full md:hidden px-4">
-          <h2 className="text-5xl font-semibold mb-2">Chair Thatty</h2>
-          <span className="text-xl">IDR 12.000.000</span>
+          <h2 className="text-5xl font-semibold mb-2">{data.title}</h2>
+          <span className="text-xl">IDR {data.price}</span>
         </div>
         <div className="flex-1">
           <div className="slider md:justify-between">
             <div className="thumbnail">
-              {/* <!-- Slidesshow thumbnail item 1 Start --> */}
-              <div className="px-2">
-                <div
-                  className="item selected"
-                  data-img="/images/content/showcase-1.front.jpg"
-                >
-                  <img
-                    src="/images/content/showcase-1.front.jpg"
-                    alt="chair side"
-                    className="object-cover w-full h-full rounded-lg"
-                  />
-                </div>
-              </div>
-              {/* <!-- End Slidesshow thumbnail item 1 --> */}
-
-              {/* <!-- Slidesshow thumbnail item 2 Start --> */}
-              <div className="px-2">
-                <div
-                  className="item"
-                  data-img="/images/content/showcase-1.back.jpg"
-                >
-                  <img
-                    src="/images/content/showcase-1.back.jpg"
-                    alt="chair side"
-                    className="object-cover w-full h-full rounded-lg"
-                  />
-                </div>
-              </div>
-              {/* <!-- End Slidesshow thumbnail item 2 --> */}
-
-              {/* <!-- Slidesshow thumbnail item 3 Start --> */}
-              <div className="px-2">
-                <div
-                  className="item"
-                  data-img="/images/content/showcase-1.rear.jpg"
-                >
-                  <img
-                    src="/images/content/showcase-1.rear.jpg"
-                    alt="chair side"
-                    className="object-cover w-full h-full rounded-lg"
-                  />
-                </div>
-              </div>
-              {/* <!-- End Slidesshow thumbnail item 3 --> */}
-
-              {/* <!-- Slidesshow thumbnail item 4 Start --> */}
-              <div className="px-2">
-                <div
-                  className="item"
-                  data-img="/images/content/showcase-1.side.jpg"
-                >
-                  <img
-                    src="/images/content/showcase-1.side.jpg"
-                    alt="chair side"
-                    className="object-cover w-full h-full rounded-lg"
-                  />
-                </div>
-              </div>
-              {/* <!-- End Slidesshow thumbnail item 4 --> */}
-
-              {/* <!-- Slidesshow thumbnail item 5 Start --> */}
-              <div className="px-2">
-                <div
-                  className="item"
-                  data-img="/images/content/showcase-1.top.jpg"
-                >
-                  <img
-                    src="/images/content/showcase-1.top.jpg"
-                    alt="chair side"
-                    className="object-cover w-full h-full rounded-lg"
-                  />
-                </div>
-              </div>
-              {/* <!-- End Slidesshow thumbnail item 5 --> */}
+              {data?.imgUrls.map((item) => {
+                return (
+                  <div
+                    className="px-2"
+                    key={item}
+                    onClick={() => setSlider(item)}
+                  >
+                    <div
+                      className={[
+                        'item',
+                        slider === item ? 'bg-gray-100 selected' : '',
+                      ].join(' ')}
+                    >
+                      <img
+                        src={item}
+                        alt={item}
+                        className="object-cover w-full h-full rounded-lg"
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div className="preview">
               <div className="item rounded-lg h-full overflow-hidden">
                 <img
-                  src="/images/content/showcase-1.front.jpg"
-                  alt="chair"
+                  src={slider}
+                  alt={slider}
                   className="object-cover w-full h-full rounded-lg"
                 />
               </div>
@@ -99,8 +51,8 @@ export default function ProductDetails() {
         </div>
         <div className="flex-1 px-4 md:p-6">
           <div className="hidden md:block">
-            <h2 className="text-5xl font-semibold mb-2">Chair Thatty</h2>
-            <p className="text-xl">IDR 12.000.000</p>
+            <h2 className="text-5xl font-semibold mb-2">{data.title}</h2>
+            <p className="text-xl">IDR {data.price}</p>
           </div>
 
           <a
@@ -127,16 +79,7 @@ export default function ProductDetails() {
           <hr className="my-8" />
 
           <h6 className="text-xl font-semibold mb-4">About the product:</h6>
-          <p className="text-xl leading-7 mb-6">
-            Tailored to a level of perfection synonymous with that of a Savile
-            Row suit and with understated quality in the detail, Jetty has been
-            influenced by timeless 1950s style.
-          </p>
-          <p className="text-xl leading-7 mb-6">
-            Providing a subtle nod to the past, Jetty also provides a perfect
-            solution for the way we work today. A comprehensive product family,
-            Jetty features a variety of elegant chairs and sofas.
-          </p>
+          {data.description ? ReactHtmlParser(data.description) : ''}
         </div>
       </div>
     </section>
