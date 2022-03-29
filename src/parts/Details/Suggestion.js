@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Suggestion({ data }) {
-  console.log(data);
   return (
     <section className="bg-gray-100 px-4 py-16">
       <div className="container mx-auto">
