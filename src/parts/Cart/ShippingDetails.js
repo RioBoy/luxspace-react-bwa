@@ -40,7 +40,7 @@ export default function ShippingDetails() {
     event.preventDefault();
     try {
       const res = await fetchData({
-        url: `/api/checkoutsss`,
+        url: `/api/checkout`,
         method: 'POST',
         body: JSON.stringify({
           ...payload,
