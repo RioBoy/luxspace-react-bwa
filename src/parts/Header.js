@@ -6,7 +6,7 @@ import { useGlobalContext } from 'helpers/hooks/useGlobalContext';
 import { ReactComponent as IconCart } from 'assets/images/icon-cart.svg';
 
 export default function Header({ theme, position }) {
-  // const [toggleMainMenu, setToggleMainMenu] = useState(false);
+  const [toggleMainMenu, setToggleMainMenu] = useState(false);
   const [isCartChange, setCartChange] = useState(false);
   const { state } = useGlobalContext();
 
@@ -23,7 +23,7 @@ export default function Header({ theme, position }) {
   }, [state.cart]);
 
   return (
-    <header className={[position, 'w-full z-20 px-4'].join(' ')}>
+    <header className={[position, 'w-full z-40 px-4'].join(' ')}>
       <div className="container mx-auto py-10">
         <div className="flex flex-stretch items-center">
           <div className="w-56 flex items-center">
@@ -40,7 +40,12 @@ export default function Header({ theme, position }) {
           <div className="w-auto">
             <ul
               id="menu"
-              className="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100"
+              className={[
+                'fixed bg-white inset-0 flex flex-col items-center justify-center md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center',
+                toggleMainMenu
+                  ? 'opacity-100 z-30 visible'
+                  : 'invisible opacity-0',
+              ].join(' ')}
             >
               <li className="mx-3 py-6 md:py-0">
                 <Link
@@ -102,8 +107,11 @@ export default function Header({ theme, position }) {
             <ul className="flex items-center">
               <li className="ml-6 block md:hidden">
                 <button
-                  id="menu-toggler"
-                  className="relative flex z-50 items-center w-8 h-8 text-black focus:outline-none"
+                  className={[
+                    'flex z-50 items-center justify-center w-8 h-8 text-black focus:outline-none',
+                    toggleMainMenu ? 'fixed top-0 right-0' : 'relative',
+                  ].join(' ')}
+                  onClick={() => setToggleMainMenu((prev) => !prev)}
                 >
                   <svg
                     className="fill-current"

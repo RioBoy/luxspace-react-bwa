@@ -5,10 +5,11 @@ import Header from 'parts/Header';
 import Breadcrumb from 'components/Breadcrumb';
 import Sitemap from 'parts/Sitemap';
 import Footer from 'parts/Footer';
+import Document from 'parts/Document';
 
 export default function Congratulations() {
   return (
-    <>
+    <Document>
       <Header theme="white" />
 
       <Breadcrumb
@@ -46,6 +47,6 @@ export default function Congratulations() {
 
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }
